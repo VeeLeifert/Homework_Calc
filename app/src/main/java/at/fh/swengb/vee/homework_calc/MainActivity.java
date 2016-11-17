@@ -73,4 +73,11 @@ public class MainActivity extends AppCompatActivity {
             resultViewMM2M.setText("Wrong input!!!!!!!!!");
             e.printStackTrace();}
     }
+
+    public void showAbout(View view) {
+        Intent intent = new Intent(this, displayAbout.class);
+        String message = (resultViewM2MM.getText().toString()) + "\n" + (resultViewMM2M.getText().toString());
+        intent.putExtra("data", message);
+        startActivity(intent);
+    }
 }
